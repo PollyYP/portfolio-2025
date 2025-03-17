@@ -7,9 +7,20 @@ export default function Home() {
   const [printTextIndex, setPrintTextIndex] = useState(0);
   const printTexts = ["console.log", "System.out.println", "print", "printf"];
 
+  const [aboutTextIndex, setAboutTextIndex] = useState(0);
+  const aboutTexts = ["Full-Stack Web Developer", "Software Developer"];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setPrintTextIndex((prevIndex) => (prevIndex + 1) % printTexts.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAboutTextIndex((prevIndex) => (prevIndex + 1) % aboutTexts.length);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -69,40 +80,65 @@ export default function Home() {
                     backgroundBlendMode: "multiply",
                     backgroundSize: "cover"
                   }}>
-                  <div className="flex flex-col items-center p-8 py-12 text-gray-300 text-center">
-                    <h1 className="py-4 text-5xl font-bold"> Full-Stack Web Developer</h1>
-                    <p className="pb-6"> I am a developer passionate about creating clean, functional, and beautiful web experiences.</p>
+                  <div className="flex flex-col text-gray-300 pl-52 text-left">
+                  <div className="h-8 overflow-hidden">
+                    <div className="animate-slide">
+                      <p className="text-lg font-mono">{aboutTexts[aboutTextIndex]}</p>
+                    </div>
+                  </div>
+                    <h1 className="pt-2 pl-2 text-5xl font-bold">Clean</h1>
+                    <h1 className="pt-2 pl-2 text-5xl font-bold">Functional</h1>
+                    <h1 className="pt-2 pl-2 pb-40 text-5xl font-bold">Beautiful</h1>
+
                   </div>
                 </div>
                 <div className="flex flex-col col-span-12 p-6 divide-y lg:col-span-6 lg:p-10 divide-gray-700">
                   <div className="pt-6 pb-4 space-y-2">
-                    <span>12 June</span>
-                    <h1 className="text-3xl font-bold">Lorem ipsum dolor sit.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, a!</p>
-                    <a rel="noopener noreferrer" href="#" className="inline-flex items-center py-2 space-x-2 text-sm dark:text-violet-400">
-                      <span>Read more</span>
+                    <span>Sep 2023 - Present</span>
+                    <h1 className="text-3xl font-bold">Computer Science</h1>
+                    <p>University of Maryland Global Campus</p>
+                    <p className='text-sm'>Bachelor of science </p>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.umgc.edu/"
+                      className="inline-flex items-center py-2 space-x-2 text-sm dark:text-violet-400"
+                    >
+                      <span>Explore</span>
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                         <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                       </svg>
                     </a>
                   </div>
                   <div className="pt-6 pb-4 space-y-2">
-                    <span>12 June</span>
-                    <h1 className="text-3xl font-bold">Lorem ipsum dolor sit.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, a!</p>
-                    <a rel="noopener noreferrer" href="#" className="inline-flex items-center py-2 space-x-2 text-sm dark:text-violet-400">
-                      <span>Read more</span>
+                    <span>Mar 2025</span>
+                    <h1 className="text-3xl font-bold">IBM Full-Stack Software Developer</h1>
+                    <p>Coursera</p>
+                    <p className='text-sm'>Professional Certificate</p>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.coursera.org/"
+                      className="inline-flex items-center py-2 space-x-2 text-sm dark:text-violet-400"
+                    >
+                      <span>Explore</span>
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                         <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                       </svg>
                     </a>
                   </div>
                   <div className="pt-6 pb-4 space-y-2">
-                    <span>12 June</span>
-                    <h1 className="text-3xl font-bold">Lorem ipsum dolor sit.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, a!</p>
-                    <a rel="noopener noreferrer" href="#" className="inline-flex items-center py-2 space-x-2 text-sm dark:text-violet-400">
-                      <span>Read more</span>
+                  <span>Sep 2020 - Feb 2022</span>
+                    <h1 className="text-3xl font-bold">Full-Stack Web Developer</h1>
+                    <p>Bloom Institute of Technology</p>
+                    <p className='text-sm'>Professional Certificate</p>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.bloomtech.com/"
+                      className="inline-flex items-center py-2 space-x-2 text-sm dark:text-violet-400"
+                    >
+                      <span>Explore</span>
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                         <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                       </svg>

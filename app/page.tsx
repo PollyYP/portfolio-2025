@@ -1,103 +1,179 @@
-import Image from "next/image";
+"use client"
+
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [printTextIndex, setPrintTextIndex] = useState(0);
+  const printTexts = ["console.log", "System.out.println", "print", "printf"];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPrintTextIndex((prevIndex) => (prevIndex + 1) % printTexts.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-grow">
+        {/* System.out.println text animation section */}
+        <section className="border-b ">
+          <div className="container mx-auto py-4 px-8">
+            <div className="h-8 overflow-hidden">
+              <div className="animate-slide">
+                <p className="text-lg font-mono">{printTexts[printTextIndex]}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Hero section with HELLO WORLD */}
+        <section className="py-10 px-8 border-b bg-white">
+          <div className="container mx-auto">
+            <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight text-center">
+              ("HELLO WORLD")
+            </h2>
+          </div>
+        </section>
+
+        {/* Person image section */}
+        <section className="my-6 bg-black">
+          <div className="container mx-auto">
+            <div className="relative w-full h-96 md:h-[300px] lg:h-[450px]">
+              <Image
+                src="/window.jpg"
+                alt="Polly Yospan"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+                priority
+                className="w-full"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* About section (placeholder) */}
+        <section id="about" className="my-6 py-12 px-8 border-y bg-white">
+          <div className="container mx-auto">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8">About</h2>
+            <div className="dark:bg-gray-800 dark:text-gray-50">
+              <div className="container grid grid-cols-12 mx-auto">
+              <div
+                  className="flex flex-col justify-center col-span-12 align-middle lg:col-span-6 lg:h-auto"
+                  style={{
+                    backgroundImage: "url('https://images.pexels.com/photos/25482494/pexels-photo-25482494/free-photo-of-silhouette-of-woman-head.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
+                    backgroundPosition: "center center",
+                    backgroundBlendMode: "multiply",
+                    backgroundSize: "cover"
+                  }}>
+                  <div className="flex flex-col items-center p-8 py-12 text-gray-300 text-center">
+                    <h1 className="py-4 text-5xl font-bold"> Full-Stack Web Developer</h1>
+                    <p className="pb-6"> I am a developer passionate about creating clean, functional, and beautiful web experiences.</p>
+                  </div>
+                </div>
+                <div className="flex flex-col col-span-12 p-6 divide-y lg:col-span-6 lg:p-10 divide-gray-700">
+                  <div className="pt-6 pb-4 space-y-2">
+                    <span>12 June</span>
+                    <h1 className="text-3xl font-bold">Lorem ipsum dolor sit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, a!</p>
+                    <a rel="noopener noreferrer" href="#" className="inline-flex items-center py-2 space-x-2 text-sm dark:text-violet-400">
+                      <span>Read more</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="pt-6 pb-4 space-y-2">
+                    <span>12 June</span>
+                    <h1 className="text-3xl font-bold">Lorem ipsum dolor sit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, a!</p>
+                    <a rel="noopener noreferrer" href="#" className="inline-flex items-center py-2 space-x-2 text-sm dark:text-violet-400">
+                      <span>Read more</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="pt-6 pb-4 space-y-2">
+                    <span>12 June</span>
+                    <h1 className="text-3xl font-bold">Lorem ipsum dolor sit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, a!</p>
+                    <a rel="noopener noreferrer" href="#" className="inline-flex items-center py-2 space-x-2 text-sm dark:text-violet-400">
+                      <span>Read more</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Projects section (placeholder) */}
+        <section id="projects" className="py-16 px-8 bg-gray-50">
+          <div className="container mx-auto">
+            <h2 className="text-3xl font-bold mb-8">Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Project cards would go here */}
+              <div className="bg-white p-6 rounded shadow">
+                <h3 className="text-xl font-bold mb-2">Project 1</h3>
+                <p>Description of project goes here</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact section (placeholder) */}
+        <section id="contact" className="py-16 px-8 bg-white">
+          <div className="container mx-auto">
+            <h2 className="text-3xl font-bold mb-8">Contact</h2>
+            <div className="max-w-md">
+              <p className="mb-4">
+                Interested in working together? Feel free to reach out!
+              </p>
+              <a href="mailto:contact@example.com" className="text-blue-600 hover:underline">
+                contact@example.com
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="bg-gray-200 py-6 px-8">
+        <div className="container mx-auto text-center">
+          <p>© {new Date().getFullYear()} Polly Yospan. All rights reserved.</p>
+        </div>
       </footer>
+
+      <style jsx global>{`
+        @keyframes slideUp {
+          0% {
+            transform: translateY(100%);
+            opacity: 0;
+          }
+          10% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          90% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+        }
+
+        .animate-slide {
+          animation: slideUp 3s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 }

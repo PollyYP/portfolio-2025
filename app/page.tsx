@@ -4,13 +4,14 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 import SlidingTextBanner from './components/SlidingTextBanner';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
 
 export default function Home() {
   const [printTextIndex, setPrintTextIndex] = useState(0);
   const printTexts = ["console.log", "System.out.println", "print", "printf"];
 
-  const [aboutTextIndex, setAboutTextIndex] = useState(0);
-  const aboutTexts = ["Full-Stack Web Developer", "Software Developer"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,13 +21,6 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setAboutTextIndex((prevIndex) => (prevIndex + 1) % aboutTexts.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -70,86 +64,7 @@ export default function Home() {
 
         {/* About section */}
         <section id="about" className="my-6 py-12 px-8 border-y bg-white">
-          <div className="container mx-auto">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">About</h2>
-            <div className="dark:bg-gray-800 dark:text-gray-50">
-              <div className="container grid grid-cols-12 mx-auto">
-              <div
-                  className="flex flex-col justify-center col-span-12 align-middle lg:col-span-6 lg:h-auto"
-                  style={{
-                    backgroundImage: "url('https://images.pexels.com/photos/25482494/pexels-photo-25482494/free-photo-of-silhouette-of-woman-head.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
-                    backgroundPosition: "center center",
-                    backgroundBlendMode: "multiply",
-                    backgroundSize: "cover"
-                  }}>
-                  <div className="flex flex-col text-gray-300 pl-52 text-left">
-                  <div className="h-8 overflow-hidden">
-                    <div className="animate-slide">
-                      <p className="text-lg font-mono">{aboutTexts[aboutTextIndex]}</p>
-                    </div>
-                  </div>
-                    <h1 className="pt-2 pl-1 text-5xl font-bold">Clean</h1>
-                    <h1 className="pt-2 pl-1 text-5xl font-bold">Functional</h1>
-                    <h1 className="pt-2 pl-1 pb-40 text-5xl font-bold">Beautiful</h1>
-
-                  </div>
-                </div>
-                <div className="flex flex-col col-span-12 p-6 divide-y lg:col-span-6 lg:p-10 divide-gray-700">
-                  <div className="pt-6 pb-4 space-y-2">
-                    <span>Sep 2023 - Present</span>
-                    <h1 className="text-3xl font-bold">Computer Science</h1>
-                    <p>University of Maryland Global Campus</p>
-                    <p className='text-sm'>Bachelor of science </p>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.umgc.edu/"
-                      className="inline-flex items-center py-2 space-x-2 text-sm dark:text-violet-400"
-                    >
-                      <span className='text-cyan-700'>Explore</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                      </svg>
-                    </a>
-                  </div>
-                  <div className="pt-6 pb-4 space-y-2">
-                    <span>Mar 2025</span>
-                    <h1 className="text-3xl font-bold">IBM Full-Stack Software Developer</h1>
-                    <p>Coursera</p>
-                    <p className='text-sm'>Professional Certificate</p>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.coursera.org/account/accomplishments/professional-cert/C4PIYJUXLNZQ"
-                      className="inline-flex items-center py-2 space-x-2 text-sm dark:text-violet-400"
-                    >
-                      <span className='text-cyan-700'>Explore</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                      </svg>
-                    </a>
-                  </div>
-                  <div className="pt-6 pb-4 space-y-2">
-                  <span>Sep 2020 - Feb 2022</span>
-                    <h1 className="text-3xl font-bold">Full-Stack Web Developer</h1>
-                    <p>Bloom Institute of Technology</p>
-                    <p className='text-sm'>Professional Certificate</p>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.bloomtech.com/"
-                      className="inline-flex items-center py-2 space-x-2 text-sm dark:text-violet-400"
-                    >
-                      <span className='text-cyan-700'>Explore</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <About/>
         </section>
 
         {/* Banner section */}
@@ -157,18 +72,15 @@ export default function Home() {
           <SlidingTextBanner/>
         </section>
 
+        {/* Experience section */}
+        <section id="projects" className="border-b bg-gray-50">
+          <Experience/>
+        </section>
+
+
         {/* Projects section */}
-        <section id="projects" className="my-6 pt-8 pb-12 px-8 border-b bg-gray-50">
-          <div className="container mx-auto">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Project cards would go here */}
-              <div className="bg-white p-6 rounded shadow">
-                <h3 className="text-xl font-bold mb-2">Project 1</h3>
-                <p>Description of project goes here</p>
-              </div>
-            </div>
-          </div>
+        <section id="projects" className="pt-8 pb-12 px-8 border-b bg-gray-50">
+          <Projects/>
         </section>
 
         {/* Contact section */}

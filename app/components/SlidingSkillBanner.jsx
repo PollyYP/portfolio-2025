@@ -1,8 +1,10 @@
 import React from 'react';
 
-const SlidingTextBanner = () => {
+const SlidingSkillBanner = () => {
   const skills = [
-    "HTML", "CSS", "JAVA", "JAVASCRIPT", "PYTHON", "C", "TAILWIND", "NEXT.JS", "NODE.JS", "KUBERNETES"
+    "HTML", "CSS", "JAVA", "JAVAFX", "JAVASCRIPT",
+    "PYTHON", "C", "TAILWIND", "NEXT.JS", "NODE.JS",
+    "KUBERNETES", "JEST", "SELENIUM"
   ];
 
   // Convert array into a single string with spaces and duplication for continuous animation
@@ -35,6 +37,6 @@ const SlidingTextBanner = () => {
   );
 };
 
-export default SlidingTextBanner;
+export default SlidingSkillBanner;
 
 

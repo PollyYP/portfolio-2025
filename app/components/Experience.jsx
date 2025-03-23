@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 function Experience() {
   return (
@@ -8,10 +9,16 @@ function Experience() {
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">Experience</h2>
             <div className="mt-12 grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-2">
                 <article>
-                    <div className="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative" style={{height: '24em'}}>
+                    <div className="w-full max-w-screen-md mx-auto relative" style={{height: '24em'}}>
                     <div className="absolute left-0 bottom-0 w-full h-full z-10"
                     style={{ backgroundImage: 'linear-gradient(180deg, transparent, rgba(0,0,0,0.7))' }}></div>
-                    <img src="/promise.jpg" className="absolute left-0 top-0 w-full h-full z-0 object-cover opacity-70" />
+                    <Image
+                        src="/promise.jpg"
+                        alt="Description of the image"
+                        layout="fill"
+                        objectFit="cover"
+                        className="absolute left-0 top-0 w-full h-full z-0 opacity-70"
+                    />
                     <div className="p-4 absolute bottom-0 left-0 z-20">
                         <Link
                         target="_blank"
@@ -27,7 +34,14 @@ function Experience() {
                             Family Promise - Frontend
                             </h2>
                             <div className="flex mt-3">
-                                <img src="/bloomtech.png" alt='Bloom Tech Logo' className="h-10 w-10 rounded-full mr-2 object-cover" />
+                            <Image
+                                src="/bloomtech.png"
+                                alt="Bloom Tech Logo"
+                                width={40}
+                                height={40}
+                                className="rounded-full mr-2 object-cover"
+                                quality={100}
+                            />
                                 <div>
                                 <p className="font-semibold text-gray-200 text-sm"> Bloom Tech Lab </p>
                                 <p className="font-semibold text-gray-400 text-xs"> February 2022 </p>
@@ -35,7 +49,7 @@ function Experience() {
                             </div>
                     </div>
                     </div>
-                    <div className="px-4 lg:px-0 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed border-x border-b">
+                    <div className="px-4 lg:px-0 text-gray-700 max-w-screen-md mx-auto md:text-lg leading-relaxed border-x border-b">
                         <p className="mx-6 pt-12 pb-6 text-justify">
                         Family Promise is an organization committed to helping local communities harness their collective compassion
                         to tackle the root causes of family homelessness. The organization strategically utilizes existing local resources
@@ -71,10 +85,16 @@ function Experience() {
                     </div>
                 </article>
                 <article>
-                    <div className="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative" style={{height: '24em'}}>
+                    <div className="w-full max-w-screen-md mx-auto relative" style={{height: '24em'}}>
                     <div className="absolute left-0 bottom-0 w-full h-full z-10"
                     style={{ backgroundImage: 'linear-gradient(180deg, transparent, rgba(0,0,0,0.7))' }}></div>
-                    <img src="/kidscreen.jpg" className="absolute left-0 top-0 w-full h-full z-0 object-cover opacity-70" />
+                    <Image
+                        src="/kidscreen.jpg"
+                        alt="Descriptive text about the image"
+                        layout="fill"
+                        objectFit="cover"
+                        className="absolute left-0 top-0 w-full h-full z-0 object-cover opacity-70"
+                    />
                     <div className="p-4 absolute bottom-0 left-0 z-20">
                         <Link
                         target="_blank"
@@ -90,7 +110,14 @@ function Experience() {
                             Scribble Stadium - Frontend
                             </h2>
                             <div className="flex mt-3">
-                                <img src="/bloomtech.png" alt='Bloom Tech Logo' className="h-10 w-10 rounded-full mr-2 object-cover" />
+                                <Image
+                                    src="/bloomtech.png"
+                                    alt="Bloom Tech Logo"
+                                    width={40}
+                                    height={40}
+                                    className="rounded-full mr-2 object-cover"
+                                    quality={100}
+                                />
                                 <div>
                                 <p className="font-semibold text-gray-200 text-sm"> Bloom Tech Lab </p>
                                 <p className="font-semibold text-gray-400 text-xs"> January 2022 </p>
@@ -98,7 +125,7 @@ function Experience() {
                             </div>
                     </div>
                     </div>
-                    <div className="px-4 lg:px-0 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed border-x border-b">
+                    <div className="px-4 lg:px-0 text-gray-700 max-w-screen-md mx-auto md:text-lg leading-relaxed border-x border-b">
                         <p className="mx-6 pt-12 pb-6 text-justify">
                         Scribble Stadium is an interactive learning platform tailored for grade school children, designed to enhance reading comprehension,
                         artistic, writing, and critical thinking skills through engaging weekly competitions. Participants engage with a serialized novel,

@@ -1,15 +1,24 @@
 import React from 'react'
 import Link from "next/link";
+import Image from 'next/image';
 
 const Projects = () => {
   return (
-    <div className="container mx-auto">
-        <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold m-8">Projects</h2>
-        <h1 className="mt-12 ml-8 text-3xl font-bold">Team Projects</h1>
-        <section className="ml-8">
+    <div>
+        <h2 className="md:ml-20 text-4xl md:text-6xl lg:text-7xl font-bold">Projects</h2>
+        <h1 className="mt-12 md:ml-20 text-3xl font-bold">Team Projects</h1>
+        <section className="md:ml-8">
             <div className="container mx-auto space-y-12">
                 <div className="pt-8 flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
-                    <img src="/watering.jpg" alt="" className="h-96 w-1/2 bg-gray-500 aspect-video" />
+                <Image
+                    src="/watering.jpg"
+                    alt="Description for the image"
+                    width={500}
+                    height={500}
+                    className="bg-gray-500"
+                    objectFit="cover"
+                    quality={100}
+                />
                     <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
                         <span className="text-xs uppercase dark:text-gray-400">Frontend</span>
                         <h3 className="text-3xl font-bold">Water My Plants</h3>
@@ -38,8 +47,16 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
-                    <img src="/trainer.jpg" alt="" className="h-80 dark:bg-gray-500 aspect-video" />
+                <div className="pt-8 flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
+                    <Image
+                        src="/trainer.jpg"
+                        alt="Description for the image"
+                        width={500}
+                        height={500}
+                        className="bg-gray-500"
+                        objectFit="cover"
+                        quality={100}
+                    />
                     <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
                         <span className="text-xs uppercase dark:text-gray-400">Backend</span>
                         <h3 className="text-3xl font-bold">Anywhere Fitness</h3>
@@ -63,7 +80,15 @@ const Projects = () => {
                 </div>
                 <h1 className="text-3xl font-bold">Solo Projects</h1>
                 <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
-                    <img src="clothes.jpg" alt="" className="h-80 dark:bg-gray-500 aspect-video" />
+                    <Image
+                        src="/clothes.jpg"
+                        alt="Description for the image"
+                        width={500}
+                        height={500}
+                        className="bg-gray-500"
+                        objectFit="cover"
+                        quality={100}
+                    />
                     <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
                         <h3 className="text-3xl font-bold">Clothing Shop Website</h3>
                         <p className="my-6 dark:text-gray-400">
@@ -90,8 +115,16 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
-                    <img src="helloworld.png" alt="" className="h-80 dark:bg-gray-500 aspect-video" />
+                <div className="pt-8 flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
+                    <Image
+                        src="/helloworld.png"
+                        alt="Description for the image"
+                        width={500}
+                        height={500}
+                        className="bg-gray-500"
+                        objectFit="cover"
+                        quality={100}
+                    />
                     <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
                         <h3 className="text-3xl font-bold">My Portfolio Website</h3>
                         <p className="my-6 dark:text-gray-400">

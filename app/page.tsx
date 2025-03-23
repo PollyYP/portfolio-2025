@@ -69,7 +69,7 @@ export default function Home() {
         </section>
 
         {/* Banner section */}
-        <section className="my-7 pb-9 border-b">
+        <section className="my-7 md:pb-9 border-b">
           <SlidingSkillBanner/>
         </section>
 
@@ -88,7 +88,7 @@ export default function Home() {
           <div className="container mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">Contact</h2>
             <div className="max-w-md mx-auto text-center">
-              <p className="mb-4">
+              <p className="mb-5 text-sm md:text-base">
                 Interested in working together? Feel free to reach out!
               </p>
               <div className="flex justify-center space-x-4 items-center">

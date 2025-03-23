@@ -1,19 +1,43 @@
-"use client"
+"use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from 'next/link';
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            const shouldStick = window.innerWidth >= 768 && currentScrollY > 10;  // Only make navbar sticky on md screens and larger
+
+            setIsSticky(shouldStick);
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('resize', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleScroll);
+        };
+    }, [lastScrollY]);
+
     return (
-        <div className="bg-neutral-200 py-6 px-8">
+        <div
+            className={`${isSticky ? 'fixed top-0 left-0 right-0 shadow-md z-30' : 'relative'} bg-neutral-200 py-6 px-8 transition-all duration-300 w-full opacity-90`}
+        >
             <div className="container mx-auto flex justify-between items-center">
-                <h1 className="tracking-wide text-2xl font-bold">POLLY YOSPAN</h1>
+                <Link href="#" className="text-black hover:text-gray-600 transition">
+                    <h1 className="tracking-wide text-2xl font-bold">POLLY YOSPAN</h1>
+                </Link>
 
                 {/* Desktop Navigation */}
                 <nav className="space-x-12 hidden md:flex">
@@ -30,7 +54,7 @@ export default function Navbar() {
                         Contact
                     </Link>
                 </nav>
-
+                
                 {/* Desktop Social Icons */}
                 <div className="hidden md:flex space-x-4">
                     <Link href="mailto:pollyyospan@gmail.com" className="bg-black rounded-full p-2 hover:opacity-80 transition">

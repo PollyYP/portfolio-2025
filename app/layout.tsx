@@ -7,7 +7,11 @@ const manrope = Manrope({
   variable: '--font-manrope',
 });
 
-export default function RootLayout({ children }) {
+interface LayoutProps {
+  children: React.ReactNode;  // Explicit type for children
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className={`${manrope.variable} font-manrope antialiased`}>
       <Navbar />
@@ -15,3 +19,5 @@ export default function RootLayout({ children }) {
     </div>
   );
 }
+
+export default Layout;

@@ -20,7 +20,7 @@ export default function Home() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [printTexts.length]);
 
 
   return (
@@ -41,7 +41,7 @@ export default function Home() {
         <section className="py-10 px-8 border-b bg-white">
           <div className="container mx-auto">
             <h2 className="tracking-wide text-4xl md:text-8xl lg:text-9xl font-bold text-center">
-              ("HELLO WORLD")
+            <div>{"(\"HELLO WORLD\")"}</div>
             </h2>
           </div>
         </section>

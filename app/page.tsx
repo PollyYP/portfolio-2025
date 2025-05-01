@@ -40,7 +40,7 @@ export default function Home() {
         {/* Hero section with HELLO WORLD */}
         <section className="py-10 px-8 border-b bg-white">
           <div className="container mx-auto">
-            <h2 className="tracking-wide text-4xl md:text-8xl lg:text-9xl font-bold text-center">
+            <h2 className="tracking-wide text-3xl md:text-8xl lg:text-9xl font-bold text-center">
             <div>{"(\"HELLO WORLD\")"}</div>
             </h2>
           </div>

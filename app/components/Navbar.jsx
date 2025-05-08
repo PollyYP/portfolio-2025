@@ -35,7 +35,7 @@ export default function Navbar() {
             className={`${isSticky ? 'fixed top-0 left-0 right-0 shadow-md z-30' : 'relative'} bg-neutral-200 py-6 px-8 transition-all duration-300 w-full opacity-90`}
         >
             <div className="container mx-auto flex justify-between items-center">
-                <Link href="#" className="text-black hover:text-gray-600 transition">
+                <Link href="/" className="text-black hover:text-gray-600 transition">
                     <h1 className="tracking-wide text-2xl font-bold">POLLY YOSPAN</h1>
                 </Link>
 
@@ -44,8 +44,8 @@ export default function Navbar() {
                     <Link href="#about" className="text-black hover:text-gray-600 transition">
                         About
                     </Link>
-                    <Link href="#experience" className="text-black hover:text-gray-600 transition">
-                        Experience
+                    <Link href="#experiences" className="text-black hover:text-gray-600 transition">
+                        Experiences
                     </Link>
                     <Link href="#projects" className="text-black hover:text-gray-600 transition">
                         Projects
@@ -54,7 +54,7 @@ export default function Navbar() {
                         Contact
                     </Link>
                 </nav>
-                
+
                 {/* Desktop Social Icons */}
                 <div className="hidden md:flex space-x-4">
                     <Link href="mailto:pollyyospan@gmail.com" className="bg-black rounded-full p-2 hover:opacity-80 transition">
@@ -119,7 +119,7 @@ export default function Navbar() {
                                 About
                             </Link>
                             <Link
-                                href="#experience"
+                                href="#experiences"
                                 className=" text-gray-100 hover:text-gray-600 transition py-3 text-xl"
                                 onClick={toggleMenu}
                             >

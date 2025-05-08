@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import SlidingSkillBanner from './components/SlidingSkillBanner';
 import About from './components/About';
-import Experience from './components/Experience';
+import ExperiencePreview from './components/ExperiencePreview';
 import Projects from './components/Projects';
 
 export default function Home() {
@@ -75,7 +75,7 @@ export default function Home() {
 
         {/* Experience section */}
         <section id="experience" className="border-b bg-gray-50">
-          <Experience/>
+          <ExperiencePreview/>
         </section>
 
         {/* Projects section */}

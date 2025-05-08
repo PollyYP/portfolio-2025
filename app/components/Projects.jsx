@@ -31,14 +31,14 @@ const Projects = () => {
                         <div className="mt-10 lg:mt-8">
                             <Link
                             href= "https://github.com/BUILD-WEEK-TT-WEBPT-102/FRONT-END" target="_blank"
-                            className="inline-flex items-center space-x-2 text-cyan-700 text-lg font-semibold hover:opacity-75 sm:px-4 sm:text-base">
+                            className="inline-flex items-center space-x-2 text-cyan-700  font-semibold hover:opacity-75 sm:px-4 text-base">
                                <span>Github Repo</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                                 </svg>
                             </Link>
                             <Link href= "https://water-my-plant-front-end-lzilyq8km-bwwebpt102.vercel.app/" target="_blank"
-                             className="inline-flex items-center space-x-2 text-cyan-700 text-lg font-semibold hover:opacity-75 sm:px-4 sm:text-base">
+                             className="inline-flex items-center space-x-2 text-cyan-700 text-lg font-semibold hover:opacity-75 px-4">
                                 <span>Live</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -69,7 +69,7 @@ const Projects = () => {
                         <div className="flex justify-end items-center mt-8 lg:mt-7">
                         <Link
                             href= "https://github.com/Build-Week-anywhere-fitness-5/backend" target="_blank"
-                            className="inline-flex items-center space-x-2 text-cyan-700 text-lg font-semibold hover:opacity-75 sm:px-4 sm:text-base">
+                            className="inline-flex items-center space-x-2 text-cyan-700 font-semibold hover:opacity-75 px-4 text-base">
                                <span>Github Repo</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -99,7 +99,7 @@ const Projects = () => {
                         <div className="mt-10 lg:mt-8">
                             <Link
                             href= "https://github.com/PollyYP/ecommerce-clothing-shop" target="_blank"
-                            className="inline-flex items-center space-x-2 text-cyan-700 text-lg font-semibold hover:opacity-75 sm:px-4 sm:text-base">
+                            className="inline-flex items-center space-x-2 text-cyan-700 font-semibold hover:opacity-75 px-4 text-base">
                                <span>Github Repo</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -135,7 +135,7 @@ const Projects = () => {
                         <div className="mt-10 lg:mt-8">
                             <Link
                             href= "https://github.com/PollyYP/portfolio-2025" target="_blank"
-                            className="inline-flex items-center space-x-2 text-cyan-700 text-lg font-semibold hover:opacity-75 sm:px-4 sm:text-base">
+                            className="inline-flex items-center space-x-2 text-cyan-700 font-semibold hover:opacity-75 px-4 text-base">
                                <span>Github Repo</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>

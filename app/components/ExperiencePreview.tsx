@@ -23,6 +23,12 @@ function ExperiencePreview() {
   const familyPromise = getExp(3);
   const scribbleStadium = getExp(4);
 
+  // ---- Type helper for optional screenshots (removes `any`) ----
+  type ExperienceWithScreens = Experience & { screenshots?: unknown };
+  function hasScreenshots(exp: Experience | null): exp is Experience & { screenshots: string[] } {
+    return !!exp && 'screenshots' in (exp as ExperienceWithScreens) && Array.isArray((exp as ExperienceWithScreens).screenshots);
+  }
+
   return (
     <div className="flex justify-center">
       <div className="2xl:mx-auto 2xl:container lg:px-28 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-full">
@@ -221,10 +227,10 @@ function ExperiencePreview() {
                   <p className="mb-6">{selected.description}</p>
 
                   {/* Optional screenshots block if present in experienceData */}
-                  {'screenshots' in selected && Array.isArray((selected as any).screenshots) && (selected as any).screenshots.length > 0 && (
+                  {hasScreenshots(selected) && selected.screenshots.length > 0 && (
                     <div className="mb-8">
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        {(selected as any).screenshots.map((src: string, i: number) => (
+                        {selected.screenshots.map((src, i) => (
                           <div key={src} className="relative w-full aspect-[16/10] overflow-hidden rounded-md">
                             <Image
                               src={src}

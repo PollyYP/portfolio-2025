@@ -9,11 +9,41 @@ export interface Experience {
   date: string;
   description: string;
   role: string;
+  screenshots?: string[];
 }
+
 
   export const experienceData: Experience[] = [
     {
       id: 1,
+      title: 'Sho Order Board App',
+      image: '/orderboardPreview.png',
+      logo: '/shoLogo.png',
+      liveUrl: 'https://sho-order-board-git-main-pollyyps-projects.vercel.app/login',
+      org: 'Sho Sushi & Izakaya',
+      date: 'August 2025',
+      description: `Sho Order Board is an internal web app that centralizes ingredient and supply requests for our team.
+    Employees submit items with quantity, vendor, prep station, requester, and requested date.
+    The board groups items by vendor, shows a running total for supported vendors to help meet minimums,
+    and lets managers mark items as ordered. An ASAP tag highlights urgent needs.
+    Everyone sees real time updates so the kitchen and managers stay in sync across devices.`,
+      role: `Built end to end with Next.js, TypeScript, Tailwind CSS, Firebase Auth, and Firestore.
+    - Role based access, security rules, and server timestamps for audit fields.
+    - Real time listeners with onSnapshot plus optimistic UI for fast interactions.
+    - Vendor filters and per vendor total calculation for Baldor, Keany, IGF, and Restaurant Depot.
+    - ASAP workflow that only the original requester can toggle to flag urgent reorders.
+    - Order history view with date range search and a PastOrder collection.
+    - SMS notifications to specific chef (order ready and exception alerts).
+    - Responsive UI with cards and badges to match the portfolio preview pattern.
+    - Deployed on Vercel with environment secrets and error handling.`,
+      screenshots: [
+        '/orderboard1.png',
+        '/orderboard2.png',
+        '/orderboard3.png',
+      ],
+    },
+    {
+      id: 2,
       title: 'Restaurant Website',
       image: '/shoHomePage.png',
       logo: '/shoLogo.png',
@@ -25,7 +55,7 @@ export interface Experience {
     },
 
     {
-      id: 2,
+      id: 3,
       title: 'Family Promise - Frontend',
       image: '/promise.jpg',
       github: 'https://github.com/BloomTech-Labs/family-promise-case-mgmt-fe',
@@ -48,12 +78,12 @@ export interface Experience {
       - Enhanced Usability: Added links to detailed family profiles, improving navigation and efficiency.
 
       - UI Refinement: Grouped related data and used color-coded tags for case statuses.
-      
+
       - Collaboration and Version Control: Worked with stakeholders and used Git for version control.`
     },
 
     {
-        id: 3,
+        id: 4,
         title: 'Scribble Stadium - Frontend',
         image: '/kidscreen.jpg',
         github: 'https://github.com/BloomTech-Labs/scribble-stadium-fe',

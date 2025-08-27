@@ -8,8 +8,11 @@ export default function ContactMe() {
             <div className="container mx-auto text-center">
                 <h2 className="text-3xl font-bold mb-8">Contact</h2>
                 <div className="max-w-md mx-auto text-center">
+                    <p className="text-sm md:text-base">
+                        Interested in working together?
+                    </p>
                     <p className="mb-5 text-sm md:text-base">
-                        Interested in working together? Feel free to reach out!
+                        Feel free to reach out!
                     </p>
                     <div className="flex justify-center space-x-4 items-center">
                         <Link href="mailto:pollyyospan@gmail.com" className="bg-black rounded-full p-2 hover:opacity-80 transition">

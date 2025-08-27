@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 
 const About = () => {
     const [aboutTextIndex, setAboutTextIndex] = useState(0);
@@ -44,45 +43,77 @@ const About = () => {
               <h1 className="text-3xl font-bold">Computer Science</h1>
               <p>University of Maryland Global Campus</p>
               <p className='text-sm'>Bachelor of science </p>
-              <Link
+              <a
                 href="https://www.umgc.edu/"
+                target='_blank'
+                rel='noopener noreferrer'
                 className="inline-flex items-center py-2 space-x-2 text-sm text-cyan-700 hover:opacity-75"
               >
                 <span>Explore</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                   <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                 </svg>
-              </Link>
+              </a>
             </div>
             <div className="pt-6 pb-4 space-y-2">
               <span>Mar 2025</span>
               <h1 className="text-3xl font-bold">IBM Full-Stack Software Developer</h1>
               <p>Coursera</p>
               <p className='text-sm'>Professional Certificate</p>
-              <Link
-                href="https://www.coursera.org/account/accomplishments/professional-cert/C4PIYJUXLNZQ"
-                className="inline-flex items-center py-2 space-x-2 text-sm text-cyan-700 hover:opacity-75"
-              >
-                <span>Explore</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                  <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                </svg>
-              </Link>
+              <div className='flex flex-col'>
+                <a
+                  href="https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer"
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className="inline-flex items-center py-2 space-x-2 text-sm text-cyan-700 hover:opacity-75"
+                >
+                  <span>Explore</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://www.coursera.org/account/accomplishments/professional-cert/C4PIYJUXLNZQ"
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className="inline-flex items-center py-2 space-x-2 text-sm text-cyan-700 hover:opacity-75"
+                >
+                  <span>See Credential</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
             <div className="pt-6 pb-4 space-y-2">
             <span>Sep 2020 - Feb 2022</span>
               <h1 className="text-3xl font-bold">Full-Stack Web Developer</h1>
               <p>Bloom Institute of Technology</p>
               <p className='text-sm'>Professional Certificate</p>
-              <Link
-                href="https://www.bloomtech.com/"
-                className="inline-flex items-center py-2 space-x-2 text-sm text-cyan-700 hover:opacity-75"
-              >
-                <span>Explore</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                  <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                </svg>
-              </Link>
+              <div className='flex flex-col'>
+                <a
+                  href="https://www.bloomtech.com/"
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className="inline-flex items-center py-2 space-x-2 text-sm text-cyan-700 hover:opacity-75"
+                >
+                  <span>Explore</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                  </svg>
+                </a>
+                <a
+                    href="https://www.credly.com/badges/03d60e22-f838-4dcf-9022-c9a13fabe737/public_url"
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className="inline-flex items-center py-2 space-x-2 text-sm text-cyan-700 hover:opacity-75"
+                  >
+                    <span>See Credential</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                    </svg>
+                  </a>
+              </div>
             </div>
           </div>
         </div>

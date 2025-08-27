@@ -19,7 +19,7 @@ export interface Experience {
       title: 'Sho Order Board App',
       image: '/orderboardPreview.png',
       logo: '/shoLogo.png',
-      liveUrl: 'https://sho-order-board-git-main-pollyyps-projects.vercel.app/login',
+      liveUrl: 'https://sho-order-board.vercel.app/login',
       org: 'Sho Sushi & Izakaya',
       date: 'August 2025',
       description: `Sho Order Board is an internal web app that centralizes ingredient and supply requests for our team.
